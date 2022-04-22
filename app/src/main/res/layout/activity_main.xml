@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="인트로 다음 메인화면 캡쳐"
+        android:backgroundTint="#FBE9E7"
+        android:onClick="onClickCapture"
+        android:id="@+id/btn_capture"
+        android:textColor="@color/black"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_capture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_capture"
+        android:layout_margin="20dp"
+        android:background="#E8EAF6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/iv"
+                android:text="이 영역을 캡쳐할 것입니다.(이미지뷰 위에 있는 텍스트)"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="259dp"
+                android:layout_height="378dp"
+                android:src="@drawable/eat" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv"
+                android:text="이 영역을 캡쳐할 것입니다.(이미지뷰 아래에 있는 텍스트)"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
